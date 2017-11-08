@@ -13,6 +13,30 @@ namespace GC_Deliverable13_Lab12_RockPaperScissors
             Name = "";
         }
 
+        public void FindWinner (Player p)
+        {
+            if (R_P_S == p.R_P_S)
+            {
+                Console.WriteLine("Draw!");
+            }
+            else if (R_P_S == Roshambo.Paper && p.R_P_S == Roshambo.Rock)
+            {
+                Console.WriteLine($"{Name} wins!");
+            }
+            else if (R_P_S == Roshambo.Rock && p.R_P_S == Roshambo.Scissors)
+            {
+                Console.WriteLine($"{Name} wins!");
+            }
+            else if (R_P_S == Roshambo.Scissors && p.R_P_S == Roshambo.Paper)
+            {
+                Console.WriteLine($"{Name} wins!");
+            }
+            else
+            {
+                Console.WriteLine($"{p.Name} wins!");
+            }
+        }
+
         public override Roshambo GenerateRoshambo()
         {
             Console.Write("Select rock (r), paper (p), or scissors (s): ");

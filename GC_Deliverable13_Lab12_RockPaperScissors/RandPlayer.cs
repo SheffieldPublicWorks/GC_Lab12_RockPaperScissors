@@ -16,7 +16,7 @@ namespace GC_Deliverable13_Lab12_RockPaperScissors
         public override Roshambo GenerateRoshambo()
         {
             Random rand = new Random();
-            return (Roshambo)(rand.Next(0, 3)); ;
+            return (Roshambo)(rand.Next(3));
         }
     }
 }

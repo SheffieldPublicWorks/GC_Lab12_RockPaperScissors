@@ -21,32 +21,5 @@ namespace GC_Deliverable13_Lab12_RockPaperScissors
         {
             msg = "";
         }
-
-        //Methods
-        public string GetUserInput ()
-        {
-            Console.Write(msg);
-            userChoice = Console.ReadLine();
-
-            //Validate input
-            if (string.IsNullOrEmpty(userChoice) || (!int.TryParse(userChoice, out int junk) && userChoice.ToLower() != "q" && userChoice.ToLower() != "y" && userChoice.ToLower() != "n"))
-            {
-                Console.WriteLine("ERROR: Please make a valid entry or type 'Q' to exit.");
-                GetUserInput();
-            }
-
-            if (userChoice.ToLower() == "q")
-            {
-                return null; //use null for quitting even though q is given
-            }
-            //else if (userChoice.ToLower() == "n")
-            //{
-            //    return "n";
-            //}
-            else
-            {
-                return userChoice;
-            }
-        }
     }
 }
