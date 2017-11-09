@@ -43,9 +43,22 @@ namespace GC_Deliverable13_Lab12_RockPaperScissors
             Roshambo rosh = (Roshambo)0;
             string str = Console.ReadLine();
 
-            if (str != "r")
+            if (str == "r")
             {
-                rosh = (str == "p") ? Roshambo.Paper : Roshambo.Scissors;
+                rosh = Roshambo.Rock;
+            }
+            else if (str == "p")
+            {
+                rosh = Roshambo.Paper;
+            }
+            else if (str == "s")
+            {
+                rosh = Roshambo.Scissors;
+            }
+            else
+            {
+                Console.WriteLine("Please choose rock, paper, or scissors.");
+                return GenerateRoshambo();
             }
 
             return rosh;

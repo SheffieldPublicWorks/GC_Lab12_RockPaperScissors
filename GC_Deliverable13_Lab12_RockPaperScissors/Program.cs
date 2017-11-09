@@ -34,10 +34,11 @@ namespace GC_Deliverable13_Lab12_RockPaperScissors
             bool playAgain = true;
             while (playAgain)
             {
+                human1.R_P_S = human1.GenerateRoshambo();
+
                 bool validOpponent = true;
                 while (validOpponent)
                 {
-                    human1.R_P_S = human1.GenerateRoshambo();
 
                     //TODO: Need to validate invalid user selection
                     //if (!(human1.R_P_S == Roshambo.Rock || human1.R_P_S == Roshambo.Scissors || human1.R_P_S == Roshambo.Paper))
@@ -69,7 +70,6 @@ namespace GC_Deliverable13_Lab12_RockPaperScissors
                         Console.WriteLine("I'm sorry, but that was not a valid option. Please try again");
                         Console.WriteLine();
                     }
-
                 }
 
                 //output contest results
